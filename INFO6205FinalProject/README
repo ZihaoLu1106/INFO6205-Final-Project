@@ -1,0 +1,17 @@
+Basically...
+
+操作员，以下称为user.
+
+1.System receives one "Order", puts the "Order" into the List of "Order" in admin
+2.1 System iterates each "Cloth" in "Order", and use "TreeToCategorizeCloth" to categorize "Cloth" based on their color and material.
+2.2 Generate a new object:"CategorizedCloth", include "Cloth" and its "WashingMethod"
+2.3 Then it will collect all cloth with same "WashingMethod" into new "PendingClothGroup"
+2.4 Finally, put all "PendingClothGroup" into the "QueueForPendingClothGroup" and ready for further operation by us.
+3.User checks the "QueueForPendingClothGroup", choose one and selects one empty washing machine by "BSTForWorkingSlot"
+4.Start washing, user can click "next day" button to move the process forward.
+5.Once one washing slot finish its work(remain time become 0, and it will show completed), user will take the cloth out(the slot becomes empty).
+6.When all the "PendingClothGroup" are finished. the "Order" is done. put the order to the history
+
+Emergency case, when customer want to rush his/her/alien's order.
+1.rush the "QueueForPendingClothGroup" based on the OrderID
+2.push them to the in front of the queue.
