@@ -3,9 +3,12 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.info6205.info6205finalproject.HomePageController">
+<AnchorPane prefHeight="600" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.info6205.info6205finalproject.HomePageController">
    <children>
-      <Button fx:id="backButton"  layoutX="28.0" layoutY="25.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="56.0" text="Back" onAction="#onBackButtonClick"/>
+      <Button fx:id="backButton" layoutX="28.0" layoutY="25.0" mnemonicParsing="false" onAction="#onBackButtonClick" prefHeight="23.0" prefWidth="56.0" text="Back" />
+      <Button layoutX="29.0" layoutY="78.0" mnemonicParsing="false" prefHeight="38.0"  prefWidth="158.0" text="Manage Orders" />
+      <Button fx:id="createOrderButton" layoutX="29.0" layoutY="143.0" mnemonicParsing="false" prefHeight="38.0" onAction="#onCreateNewButtonClick" prefWidth="158.0" text="Create Order" />
+      <Button layoutX="29.0" layoutY="200.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="158.0" text="Manage Washing Slot" />
+      <Button layoutX="29.0" layoutY="261.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="158.0" text="Review Revenue" />
    </children>
 </AnchorPane>

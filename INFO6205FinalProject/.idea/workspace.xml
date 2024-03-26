@@ -5,19 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0dccd94-2fb6-45bb-acc4-537e18502e19" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/README" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/info6205/algorithm/BSTForWorkingSlot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/info6205/algorithm/CategorizedCloth.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/info6205/algorithm/Cloth.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/info6205/algorithm/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/info6205/algorithm/PendingClothGroup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/info6205/algorithm/QueueForPendingCLothGroup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/info6205/algorithm/TreeToCategorizeCloth.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/info6205/algorithm/WashingMethod.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/info6205/algorithm/WorkingSlot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/info6205/algorithm/admin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/info6205/info6205finalproject/CreateOrderApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/info6205/info6205finalproject/CreateOrderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/info6205/info6205finalproject/CreateOrder.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/info6205/algorithm/CategorizedCloth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/info6205/algorithm/CategorizedCloth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/info6205/algorithm/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/info6205/algorithm/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/info6205/algorithm/PendingClothGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/info6205/algorithm/PendingClothGroup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/info6205/algorithm/QueueForPendingCLothGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/info6205/algorithm/QueueForPendingCLothGroup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/info6205/algorithm/TreeToCategorizeCloth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/info6205/algorithm/TreeToCategorizeCloth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/info6205/algorithm/WashingMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/info6205/algorithm/WashingMethod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/info6205/algorithm/WorkingSlot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/info6205/algorithm/WorkingSlot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/info6205/algorithm/admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/info6205/algorithm/admin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/info6205/info6205finalproject/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/info6205/info6205finalproject/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/info6205/info6205finalproject/HomePageApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/info6205/info6205finalproject/HomePageApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/info6205/info6205finalproject/HomePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/info6205/info6205finalproject/HomePageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/info6205/info6205finalproject/HomePage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/info6205/info6205finalproject/HomePage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/info6205/info6205finalproject/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/info6205/info6205finalproject/hello-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,8 +31,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
