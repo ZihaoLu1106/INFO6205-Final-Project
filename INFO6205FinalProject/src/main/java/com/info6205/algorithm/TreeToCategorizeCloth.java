@@ -21,27 +21,58 @@ public class TreeToCategorizeCloth {
 
         TreeNode<String> root = new TreeNode<>("Clothing Color");
 
+        TreeNode<String> Cotton1 = new TreeNode<>("Cotton");
+        TreeNode<String> Denim1 = new TreeNode<>("Denim");
+        TreeNode<String> Wool1 = new TreeNode<>("Wool");
+        TreeNode<String> Polyester1 = new TreeNode<>("Polyester");
 
-        String[] colors = {"Dark", "Light", "White"};
-        for (String color : colors) {
-            TreeNode<String> colorNode = new TreeNode<>(color + " Color");
-            root.addChildren(colorNode);
+        TreeNode<String> Cotton2 = new TreeNode<>("Cotton");
+        TreeNode<String> Denim2 = new TreeNode<>("Denim");
+        TreeNode<String> Wool2 = new TreeNode<>("Wool");
+        TreeNode<String> Polyester2 = new TreeNode<>("Polyester");
 
-            String[] materials = {"Cotton", "Denim", "Silk", "Wool", "Polyester"};
-            for (String material : materials) {
-                TreeNode<String> materialNode = new TreeNode<>(material + " Material");
-                colorNode.addChildren(materialNode);
+        TreeNode<String> Cotton3 = new TreeNode<>("Cotton");
+        TreeNode<String> Denim3 = new TreeNode<>("Denim");
+        TreeNode<String> Wool3 = new TreeNode<>("Wool");
+        TreeNode<String> Polyester3 = new TreeNode<>("Polyester");
 
-                String[] methods = {"Strong", "Light", "Normal"};
-                for (String method : methods) {
-                    TreeNode<String> methodNode = new TreeNode<>(method + " Wash Method");
-                    materialNode.addChildren(methodNode);
-                }
-            }
-        }
+        //TO DO: create 3 colors
+        TreeNode<String> darkColor = new TreeNode<>("Dark Color");
+        TreeNode<String> lightColor = new TreeNode<>("Light Color");
+        TreeNode<String> whiteColor = new TreeNode<>("White Color");
+        root.addChildren(darkColor);
+        root.addChildren(lightColor);
+        root.addChildren(whiteColor);
 
-        String[] methods = {"Strong", "Light", "Normal"};
+        darkColor.addChildren(Cotton1);
+        darkColor.addChildren(Denim1);
+        darkColor.addChildren(Wool1);
+        darkColor.addChildren(Polyester1);
 
+        lightColor.addChildren(Cotton2);
+        lightColor.addChildren(Denim2);
+        lightColor.addChildren(Wool2);
+        lightColor.addChildren(Polyester2);
+
+        whiteColor.addChildren(Cotton3);
+        whiteColor.addChildren(Denim3);
+        whiteColor.addChildren(Wool3);
+        whiteColor.addChildren(Polyester3);
+
+        Cotton1.addChildren(new TreeNode<>("Strong"));
+        Denim1.addChildren(new TreeNode<>("Light"));
+        Wool1.addChildren(new TreeNode<>("Normal"));
+        Polyester1.addChildren(new TreeNode<>("Strong"));
+
+        Cotton2.addChildren(new TreeNode<>("Strong"));
+        Denim2.addChildren(new TreeNode<>("Light"));
+        Wool2.addChildren(new TreeNode<>("Normal"));
+        Polyester2.addChildren(new TreeNode<>("Strong"));
+
+        Cotton3.addChildren(new TreeNode<>("Strong"));
+        Denim3.addChildren(new TreeNode<>("Light"));
+        Wool3.addChildren(new TreeNode<>("Normal"));
+        Polyester3.addChildren(new TreeNode<>("Strong"));
     }
 
     /*
