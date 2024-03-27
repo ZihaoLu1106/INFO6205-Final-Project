@@ -4,37 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0dccd94-2fb6-45bb-acc4-537e18502e19" name="Changes" comment="">
-<<<<<<< Updated upstream
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/info6205/algorithm/TreeInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/info6205/algorithm/TreeNode.java" afterDir="false" />
+    <list default="true" id="7e388210-8933-491a-af3e-ee98b83f10a6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/info6205/algorithm/BSTInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/info6205/algorithm/BagInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/info6205/algorithm/PriorityQueueInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/info6205/algorithm/BSTForWorkingSlot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/info6205/algorithm/BSTForWorkingSlot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/info6205/algorithm/QueueForPendingCLothGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/info6205/algorithm/QueueForPendingCLothGroup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/info6205/algorithm/TreeToCategorizeCloth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/info6205/algorithm/TreeToCategorizeCloth.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/info6205/algorithm/WashingMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/info6205/algorithm/WashingMethod.java" afterDir="false" />
-=======
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/info6205/info6205finalproject/CheckRevenueApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/info6205/info6205finalproject/CheckRevenueController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/info6205/info6205finalproject/ChooseWashSlotApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/info6205/info6205finalproject/ChooseWashSlotController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/info6205/info6205finalproject/ManageOrderApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/info6205/info6205finalproject/ManageOrderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/info6205/info6205finalproject/ManageWashSlotApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/info6205/info6205finalproject/ManageWashSlotController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/info6205/info6205finalproject/SlotDetailApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/info6205/info6205finalproject/SlotDetailController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/info6205/info6205finalproject/CheckRevenue.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/info6205/info6205finalproject/ChooseWashSlot.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/info6205/info6205finalproject/ManageOrder.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/info6205/info6205finalproject/ManageWashSlot.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/info6205/info6205finalproject/SlotDetail.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/info6205/info6205finalproject/CreateOrderApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/info6205/info6205finalproject/CreateOrderApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/info6205/info6205finalproject/HomePageApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/info6205/info6205finalproject/HomePageApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/info6205/info6205finalproject/HomePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/info6205/info6205finalproject/HomePageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/info6205/info6205finalproject/HomePage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/info6205/info6205finalproject/HomePage.fxml" afterDir="false" />
->>>>>>> Stashed changes
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/info6205/info6205finalproject/CheckRevenueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/info6205/info6205finalproject/CheckRevenueController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/info6205/info6205finalproject/CreateOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/info6205/info6205finalproject/CreateOrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/info6205/info6205finalproject/CheckRevenue.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/info6205/info6205finalproject/CheckRevenue.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,58 +21,13 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Interface" />
-        <option value="Class" />
       </list>
     </option>
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="Use Maven wrapper" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
-  <component name="ProjectCodeStyleSettingsMigration">
-    <option name="version" value="2" />
-  </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 4
-}</component>
-  <component name="ProjectId" id="2eCC4PpC6eLprKMJFjxiaL33b8p" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-<<<<<<< Updated upstream
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/xupeihan/Documents/GitHub/INFO6205-Final-Project/INFO6205FinalProject&quot;
-  }
-}</component>
-=======
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
-  }
-}</component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\JANFAN\Documents\GitHub\INFO6205-Final-Project\INFO6205FinalProject\src\main\resources\com\info6205\info6205finalproject" />
-    </key>
-  </component>
->>>>>>> Stashed changes
   <component name="RunManager">
     <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.info6205.info6205finalproject.HelloApplication" />
@@ -116,22 +48,7 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-17.0.10-azul-17.0.10-3183f394aec4-a35e86d0" />
-      </set>
-    </attachedChunks>
-  </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="d0dccd94-2fb6-45bb-acc4-537e18502e19" name="Changes" comment="" />
-      <created>1711398983479</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1711398983479</updated>
-    </task>
     <servers />
   </component>
 </project>
