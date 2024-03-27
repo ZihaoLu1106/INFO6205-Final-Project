@@ -1,3 +1,5 @@
+
+
 package com.info6205.algorithm;
 
 public class WashingMethod {
@@ -10,6 +12,13 @@ public class WashingMethod {
         this.methodName = methodName;
         this.price = price;
         this.duration = duration;
+
+
+    }
+
+    public String getMethodName() {
+        return methodName;
     }
 
 }
+

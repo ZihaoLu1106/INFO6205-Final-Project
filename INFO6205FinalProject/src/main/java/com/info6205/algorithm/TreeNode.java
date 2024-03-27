@@ -31,5 +31,8 @@ public class TreeNode<T> implements TreeInterface<T> {
         this.children=children;
     }
 
-
+    public void addChildren(TreeNode<T> child){
+        children.add(child.getValue());
+    }
 }
+
