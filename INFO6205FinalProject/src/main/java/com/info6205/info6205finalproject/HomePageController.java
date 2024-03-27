@@ -12,6 +12,13 @@ public class HomePageController {
     @FXML
     private Button createOrderButton;
     @FXML
+    private Button manageOrderButton;
+    @FXML
+    private Button manageWashingSlotButton;
+    @FXML
+    private Button reviewRevenueButton;
+
+    @FXML
     protected void onBackButtonClick() throws IOException {
         HelloApplication helloApplication=new HelloApplication();
         Stage window=(Stage)backButton.getScene().getWindow();
@@ -23,4 +30,23 @@ public class HomePageController {
         Stage window=(Stage)createOrderButton.getScene().getWindow();
         createOrderApplication.start(window);
     }
+    @FXML
+    protected void onManageOrderButtonClick()throws IOException {
+        ManageOrderApplication manageOrderApplication=new ManageOrderApplication();
+        Stage window=(Stage)manageOrderButton.getScene().getWindow();
+        manageOrderApplication.start(window);
+    }
+    @FXML
+    protected void onManageWashingSlotButtonClick()throws IOException {
+        ManageWashSlotApplication manageWashSlotApplication=new ManageWashSlotApplication();
+        Stage window=(Stage)manageWashingSlotButton.getScene().getWindow();
+        manageWashSlotApplication.start(window);
+    }
+    @FXML
+    protected void onCheckRevenueButtonClick()throws IOException {
+        CheckRevenueApplication checkRevenueApplication=new CheckRevenueApplication();
+        Stage window=(Stage)reviewRevenueButton.getScene().getWindow();
+        checkRevenueApplication.start(window);
+    }
+
 }
