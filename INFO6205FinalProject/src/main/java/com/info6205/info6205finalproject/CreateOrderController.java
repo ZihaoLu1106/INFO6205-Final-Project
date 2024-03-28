@@ -1,5 +1,6 @@
 package com.info6205.info6205finalproject;
 
+import com.info6205.algorithm.Admin;
 import com.info6205.algorithm.Cloth;
 import com.info6205.algorithm.Order;
 import javafx.collections.FXCollections;
@@ -19,7 +20,11 @@ import java.util.List;
 
 public class CreateOrderController {
     private Order newOrder;
+    private Admin admin;
     ObservableList<Cloth> cloths;
+    public void setAdmin(Admin admin) {
+        this.admin=admin;
+    }
 
     @FXML
     private ComboBox<String>colorBox;
@@ -55,7 +60,7 @@ public class CreateOrderController {
     protected void onBackButtonClick() throws IOException {
         HomePageApplication homePageApplication=new HomePageApplication();
         Stage window=(Stage)backButton.getScene().getWindow();
-        homePageApplication.start(window);
+        homePageApplication.start(window,admin);
     }
     @FXML
     protected void onAddButtonClick() throws IOException {

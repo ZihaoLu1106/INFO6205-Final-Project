@@ -2,14 +2,14 @@ package com.info6205.algorithm;
 
 import java.util.List;
 
-public class admin {
+public class Admin {
 
     //singleton
-    private static admin instance;
-    public static admin getInstance() {
+    private static Admin instance;
+    public static Admin getInstance() {
         // If instance is null, create a new instance
         if (instance == null) {
-            instance = new admin();
+            instance = new Admin();
         }
         // Return the instance
         return instance;
@@ -23,7 +23,7 @@ public class admin {
     private BSTForWorkingSlot bst;
 
 
-    public admin(){
+    public Admin(){
 
 
     }
