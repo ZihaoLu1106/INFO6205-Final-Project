@@ -3,7 +3,7 @@ package com.info6205.algorithm;
 public class Order implements BagInterface<Order>{
     //this class forms as BAG!!!
     //add cloths
-    private int orderID;
+    private String orderID;
     private Cloth[]cloths;
     private int numberOfEntries;
     private String status;
@@ -12,25 +12,25 @@ public class Order implements BagInterface<Order>{
 
 
     public Order(){
-        this.orderID = 0;
+        this.orderID = "null";
         this.cloths = new Cloth[25];
         this.numberOfEntries = 0;
         this.status = "unfinished";
         this.totalPrice = 0.0;
     }
-    public Order(int orderID,Cloth[]cloths) {
+    public Order(String orderID) {
         this.orderID=orderID;
-        this.cloths=cloths;
+        this.cloths=new Cloth[25];;
         this.status="unfinished";
         this.totalPrice=0;
         numberOfEntries = 0;
     }
 
-    public int getOrderID() {
+    public String getOrderID() {
         return orderID;
     }
 
-    public void setOrderID(int orderID) {
+    public void setOrderID(String orderID) {
         this.orderID = orderID;
     }
 

@@ -18,13 +18,13 @@
       </Label>
       <ComboBox fx:id="colorBox" layoutX="42.0" layoutY="120.0" prefWidth="150.0" promptText="color" />
       <ComboBox fx:id="materialBox" layoutX="308.0" layoutY="120.0" prefWidth="150.0" promptText="material" />
-      <TableView fx:id="cartTable" layoutX="42.0" layoutY="189.0" prefHeight="345.0" prefWidth="464.0">
+      <TableView layoutX="42.0" layoutY="189.0" prefHeight="345.0" prefWidth="464.0" fx:id="cartTable">
         <columns>
-          <TableColumn fx:id="colorColumn" prefWidth="200.5" text="color" />
-          <TableColumn fx:id="materialColumn" minWidth="0.0" prefWidth="266.5" text="material" />
+          <TableColumn prefWidth="200.5" text="color" fx:id="colorColumn"/>
+          <TableColumn minWidth="0.0" prefWidth="266.5" text="material" fx:id="materialColumn"/>
         </columns>
       </TableView>
-      <Button fx:id="addButton" layoutX="637.0" layoutY="119.0" mnemonicParsing="false" onAction="#onAddButtonClick" text="add" />
+      <Button fx:id="addButton" layoutX="637.0" layoutY="119.0" onAction="#onAddButtonClick" mnemonicParsing="false" text="add" />
       <Button fx:id="checkOutButton" layoutX="610.0" layoutY="429.0" mnemonicParsing="false" onAction="#onCheckOutButtonClick" prefHeight="71.0" prefWidth="150.0" text="check out" />
    </children>
 </AnchorPane>
