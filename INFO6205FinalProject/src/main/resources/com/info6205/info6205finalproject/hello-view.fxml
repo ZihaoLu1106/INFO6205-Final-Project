@@ -16,7 +16,7 @@
    <AnchorPane prefHeight="600.0" prefWidth="760.0">
       <children>
           <Button layoutX="307.0" layoutY="342.0" onAction="#onHelloButtonClick" prefHeight="70.0" prefWidth="147.0" text="Login" />
-         <Label contentDisplay="CENTER" layoutX="225.0" layoutY="123.0" prefHeight="117.0" prefWidth="297.0" text="Welcome to Laundry Spider！">
+         <Label fx:id="title" contentDisplay="CENTER" layoutX="225.0" layoutY="123.0" prefHeight="117.0" prefWidth="297.0" text="Welcome to Laundry Spider！">
             <font>
                <Font size="19.0" />
             </font>

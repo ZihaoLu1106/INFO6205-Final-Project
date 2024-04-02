@@ -20,5 +20,12 @@ public class WashingMethod {
         return methodName;
     }
 
+    public double getPrice() {
+        return price;
+    }
+
+    public int getDuration() {
+        return duration;
+    }
 }
 

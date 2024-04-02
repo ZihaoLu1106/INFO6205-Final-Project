@@ -1,11 +1,14 @@
 package com.info6205.info6205finalproject;
 
-import com.info6205.algorithm.Admin;
-import com.info6205.algorithm.Cloth;
-import com.info6205.algorithm.Order;
+import com.info6205.algorithm.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
@@ -19,9 +22,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CreateOrderController {
+    private Stage stage;
+    private Scene scene;
+    private Parent root;
     private Order newOrder;
     private Admin admin;
     ObservableList<Cloth> cloths;
+   @FXML
     public void setAdmin(Admin admin) {
         this.admin=admin;
     }
@@ -46,7 +53,7 @@ public class CreateOrderController {
         cloths = FXCollections.observableArrayList();
 
         colorBox.getItems().removeAll(colorBox.getItems());
-        colorBox.getItems().addAll("White", "Deep", "Light");
+        colorBox.getItems().addAll("White", "Dark", "Light");
         colorBox.getSelectionModel().select("Color");
 
         materialBox.getItems().removeAll(colorBox.getItems());
@@ -57,10 +64,16 @@ public class CreateOrderController {
     @FXML
     private Button backButton;
     @FXML
-    protected void onBackButtonClick() throws IOException {
-        HomePageApplication homePageApplication=new HomePageApplication();
-        Stage window=(Stage)backButton.getScene().getWindow();
-        homePageApplication.start(window,admin);
+    protected void onBackButtonClick(ActionEvent event) throws IOException {
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("HomePage.fxml"));
+        root=loader.load();
+        HomePageController controller=loader.getController();
+        controller.setAdmin(admin);
+        stage=(Stage)((Node)event.getSource()).getScene().getWindow();
+
+        scene=new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
     @FXML
     protected void onAddButtonClick() throws IOException {
@@ -73,10 +86,10 @@ public class CreateOrderController {
 
     }
     @FXML
-    protected void onCheckOutButtonClick() throws IOException {
+    protected void onCheckOutButtonClick(ActionEvent event) throws IOException {
         LocalDateTime currentTime = LocalDateTime.now();
 
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd-HHmm");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd-HHmmss");
 
         String newID = currentTime.format(formatter);
 
@@ -85,10 +98,23 @@ public class CreateOrderController {
         for(Cloth cloth:cloths){
             newOrder.add(cloth);
         }
+        manageNewOrder(newOrder);
+        System.out.println(admin.getQueue());
 
-       /* System.out.println(newOrder.getOrderID());
-        for(Cloth cloth:newOrder.getCloths())
-            System.out.println(cloth.getColor()+" "+cloth.getMaterial());*/
+
+
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("ManageOrder.fxml"));
+        root=loader.load();
+        ManageOrderController controller=loader.getController();
+        controller.setAdmin(admin);
+        controller.setOrderList(admin);
+        stage=(Stage)((Node)event.getSource()).getScene().getWindow();
+        if(admin==null)
+            System.out.println("Yes");
+        scene=new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+
 
     }
     @FXML
@@ -100,6 +126,16 @@ public class CreateOrderController {
 
 
         cartTable.setItems(cloths);
+    }
+    @FXML
+    protected void manageNewOrder(Order order){
+        //add new order to the orderlist in admin
+        admin.getOrderList().add(order);
+        TreeToCategorizeCloth tree=new TreeToCategorizeCloth();
+        List<PendingClothGroup>list=tree.manageOrder(order);
+        for(PendingClothGroup group:list){
+            admin.getQueue().enqueue(group,1);
+        }
     }
 
 }

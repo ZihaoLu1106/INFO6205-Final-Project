@@ -5,11 +5,11 @@ import java.util.List;
 
 public class TreeNode<T> implements TreeInterface<T> {
     private T value;
-    private List<T>children;
+    private List<TreeInterface<T>> children;
 
     public TreeNode(T value) {
         this.value = value;
-        this.children=new ArrayList<T>();
+        this.children=new ArrayList<>();
     }
 
     @Override
@@ -22,17 +22,19 @@ public class TreeNode<T> implements TreeInterface<T> {
     }
 
     @Override
-    public List<T> getChildren() {
+    public List<TreeInterface<T>> getChildren() {
         return children;
     }
 
     @Override
-    public void setChildren(List<T> children) {
+    public void setChildren(List<TreeInterface<T>> children) {
         this.children=children;
     }
 
     public void addChildren(TreeNode<T> child){
-        children.add(child.getValue());
+        children.add(child);
     }
+
+
 }
 

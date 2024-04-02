@@ -5,6 +5,6 @@ import java.util.List;
 public interface TreeInterface<T> {
     T getValue();
     void setValue(T value);
-    List<T>getChildren();
-    void setChildren(List<T>children);
+    List<TreeInterface<T>>getChildren();
+    void setChildren(List<TreeInterface<T>>children);
 }

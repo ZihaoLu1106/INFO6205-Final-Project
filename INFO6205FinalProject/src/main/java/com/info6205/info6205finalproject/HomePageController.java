@@ -1,6 +1,11 @@
 package com.info6205.info6205finalproject;
 import com.info6205.algorithm.Admin;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
@@ -22,6 +27,9 @@ public class HomePageController {
     private Button manageWashingSlotButton;
     @FXML
     private Button reviewRevenueButton;
+    private Stage stage;
+    private Scene scene;
+    private Parent root;
 
 
     @FXML
@@ -31,28 +39,57 @@ public class HomePageController {
         helloApplication.start(window);
     }
     @FXML
-    protected void onCreateNewButtonClick()throws IOException {
-        CreateOrderApplication createOrderApplication=new CreateOrderApplication();
-        Stage window=(Stage)createOrderButton.getScene().getWindow();
-        createOrderApplication.start(window,admin);
+    protected void onCreateNewButtonClick(ActionEvent event)throws IOException {
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("CreateOrder.fxml"));
+        root=loader.load();
+        CreateOrderController controller=loader.getController();
+        controller.setAdmin(admin);
+        stage=(Stage)((Node)event.getSource()).getScene().getWindow();
+        if(admin==null)
+            System.out.println("Yes");
+        scene=new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
     @FXML
-    protected void onManageOrderButtonClick()throws IOException {
-        ManageOrderApplication manageOrderApplication=new ManageOrderApplication();
-        Stage window=(Stage)manageOrderButton.getScene().getWindow();
-        manageOrderApplication.start(window,admin);
+    protected void onManageOrderButtonClick(ActionEvent event)throws IOException {
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("ManageOrder.fxml"));
+        root=loader.load();
+        ManageOrderController controller=loader.getController();
+        controller.setAdmin(admin);
+        controller.setOrderList(admin);
+        stage=(Stage)((Node)event.getSource()).getScene().getWindow();
+        if(admin==null)
+            System.out.println("Yes");
+        scene=new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
     @FXML
-    protected void onManageWashingSlotButtonClick()throws IOException {
-        ManageWashSlotApplication manageWashSlotApplication=new ManageWashSlotApplication();
-        Stage window=(Stage)manageWashingSlotButton.getScene().getWindow();
-        manageWashSlotApplication.start(window,admin);
+    protected void onManageWashingSlotButtonClick(ActionEvent event)throws IOException {
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("ManageWashSlot.fxml"));
+        root=loader.load();
+        ManageWashSlotController controller=loader.getController();
+        controller.setAdmin(admin);
+        stage=(Stage)((Node)event.getSource()).getScene().getWindow();
+        if(admin==null)
+            System.out.println("Yes");
+        scene=new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
     @FXML
-    protected void onCheckRevenueButtonClick()throws IOException {
-        CheckRevenueApplication checkRevenueApplication=new CheckRevenueApplication();
-        Stage window=(Stage)reviewRevenueButton.getScene().getWindow();
-        checkRevenueApplication.start(window,admin);
+    protected void onCheckRevenueButtonClick(ActionEvent event)throws IOException {
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("CheckRevenue.fxml"));
+        root=loader.load();
+        CheckRevenueController controller=loader.getController();
+        controller.setAdmin(admin);
+        stage=(Stage)((Node)event.getSource()).getScene().getWindow();
+        if(admin==null)
+            System.out.println("Yes");
+        scene=new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
 }
