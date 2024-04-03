@@ -20,13 +20,7 @@ public interface PriorityQueueInterface <E>{
      */
     E dequeue() throws NoSuchElementException;
 
-    /**
-     * Returns the element with the highest priority without removing it from the queue.
-     *
-     * @return the element with the highest priority
-     * @throws NoSuchElementException if the priority queue is empty
-     */
-    E peek() throws NoSuchElementException;
+
 
     /**
      * Returns true if the priority queue is empty, false otherwise.
