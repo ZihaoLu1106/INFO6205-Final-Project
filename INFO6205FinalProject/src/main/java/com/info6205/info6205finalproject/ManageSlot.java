@@ -12,7 +12,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class ManageWashSlotController {
+public class ManageSlot {
+
     private Stage stage;
     private Scene scene;
     private Parent root;
@@ -26,29 +27,17 @@ public class ManageWashSlotController {
     private Button backButton;
 
     @FXML
-    protected void onBackButtonClick(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("HomePage.fxml"));
+    protected void onBackButtonClickWashing(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("ManageWashSlot.fxml"));
         root = loader.load();
-        HomePageController controller = loader.getController();
+        ManageWashSlotController controller = loader.getController();
         controller.setAdmin(admin);
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+
+
     }
-
-    @FXML
-    protected void MgnSlotButtonClick(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("ManageSlot.fxml"));
-        root = loader.load();
-        ManageSlot controller = loader.getController();
-        controller.setAdmin(admin);
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
-
 }
