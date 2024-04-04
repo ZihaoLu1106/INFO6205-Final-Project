@@ -41,8 +41,6 @@ public class QueueForPendingCLothGroup<E> implements PriorityQueueInterface<Pend
         return list.indexOf(element) == 0 ? 1 : 0;
     }
 
-
-
     @Override
     public PendingClothGroup dequeue() throws NoSuchElementException {
         if (isEmpty()) {
