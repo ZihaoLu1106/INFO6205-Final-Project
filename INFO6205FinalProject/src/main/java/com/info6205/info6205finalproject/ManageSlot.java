@@ -1,6 +1,7 @@
 package com.info6205.info6205finalproject;
 
 import com.info6205.algorithm.Admin;
+import com.info6205.algorithm.WorkingSlot;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -19,10 +20,15 @@ public class ManageSlot {
     private Parent root;
     private Admin admin;
 
+    private WorkingSlot slot;
+
     public void setAdmin(Admin admin) {
         this.admin = admin;
     }
 
+    public void setSlot(WorkingSlot slot){
+        this.slot=slot;
+    }
     @FXML
     private Button backButton;
 

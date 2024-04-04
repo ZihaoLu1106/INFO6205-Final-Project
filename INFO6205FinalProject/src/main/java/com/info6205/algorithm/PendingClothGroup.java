@@ -8,7 +8,7 @@ import java.util.List;
 
 public class PendingClothGroup {
     private String orderID;
-    private String status;
+    private String status;//Pending;Processing;Finished
     private  WashingMethod method;
     private List<Cloth> cloths;
     private int duration;

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -10,13 +11,17 @@
        <Button fx:id="backButton" layoutX="42.0" layoutY="48.0" mnemonicParsing="false" onAction="#onBackButtonClick" text="Back" />
       <TableView fx:id="orderTable" layoutX="42.0" layoutY="94.0" prefHeight="392.0" prefWidth="570.0">
         <columns>
-          <TableColumn prefWidth="205.5" text="Order ID" fx:id="orderIDColumn"/>
-          <TableColumn prefWidth="74.0" text="Cloth Num" fx:id="clothNumColumn"/>
-           <TableColumn prefWidth="127.5" text="Washing Method" fx:id="methodColumn"/>
-            <TableColumn prefWidth="162.0" text="Duration" fx:id="duariongColumn"/>
+          <TableColumn fx:id="orderIDColumn" prefWidth="205.5" text="Order ID" />
+          <TableColumn fx:id="clothNumColumn" prefWidth="74.0" text="Cloth Num" />
+           <TableColumn fx:id="methodColumn" prefWidth="127.5" text="Washing Method" />
+            <TableColumn fx:id="duariongColumn" prefWidth="162.0" text="Duration" />
 
         </columns>
       </TableView>
       <Button fx:id="showTable" layoutX="173.0" layoutY="48.0" mnemonicParsing="false" onAction="#showTable" text="showtable" />
+      <Button fx:id="findSlotButton" layoutX="634.0" layoutY="94.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="161.0" onAction="#findEmptyWashingSlot" text="Processing Next Order" />
+      <Label layoutX="627.0" layoutY="145.0" prefHeight="38.0" prefWidth="175.0" text="The Num of Washing Slot is :" />
+      <Label fx:id="slotNumber" layoutX="627.0" layoutY="183.0" prefHeight="23.0" prefWidth="139.0" text="Washing Number" />
+      <Button fx:id="checkOutButton" layoutX="634.0" layoutY="438.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="139.0" onAction="#checkOutProcess" text="Check Out" />
    </children>
 </AnchorPane>

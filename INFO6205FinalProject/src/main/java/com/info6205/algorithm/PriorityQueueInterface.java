@@ -21,7 +21,7 @@ public interface PriorityQueueInterface <E>{
     E dequeue() throws NoSuchElementException;
 
 
-
+    E peek() throws NoSuchElementException;
     /**
      * Returns true if the priority queue is empty, false otherwise.
      *

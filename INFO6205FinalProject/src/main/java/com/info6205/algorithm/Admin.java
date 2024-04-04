@@ -30,7 +30,7 @@ public class Admin {
         historyOrders=new ArrayList<>();
         categorizedTree=new TreeToCategorizeCloth();
         queue=new QueueForPendingCLothGroup<PendingClothGroup>();
-        bst=new BSTForWorkingSlot();
+        bst=BSTForWorkingSlot.getInstance();
 
     }
 
