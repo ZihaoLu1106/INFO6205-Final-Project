@@ -106,6 +106,7 @@ public class ManageOrderController {
         root=loader.load();
         ManageSlot controller=loader.getController();
         controller.setAdmin(admin);
+
         controller.setSlot(admin.getBst().getWorkingSlot(this.slotIndex));
         stage=(Stage)((Node)event.getSource()).getScene().getWindow();
 

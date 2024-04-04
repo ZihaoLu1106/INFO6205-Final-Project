@@ -71,6 +71,7 @@ public class HomePageController {
         root=loader.load();
         ManageWashSlotController controller=loader.getController();
         controller.setAdmin(admin);
+        controller.setColor();
         stage=(Stage)((Node)event.getSource()).getScene().getWindow();
         if(admin==null)
             System.out.println("Yes");

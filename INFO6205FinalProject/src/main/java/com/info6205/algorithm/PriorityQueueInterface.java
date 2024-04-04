@@ -20,7 +20,7 @@ public interface PriorityQueueInterface <E>{
      */
     E dequeue() throws NoSuchElementException;
 
-    
+
     E peek() throws NoSuchElementException;
 
     /**
