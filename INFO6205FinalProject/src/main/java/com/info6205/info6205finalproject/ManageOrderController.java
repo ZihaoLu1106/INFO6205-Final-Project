@@ -47,12 +47,15 @@ public class ManageOrderController {
 
     @FXML
     private TableColumn<Cloth, String> materialColumn;
+
     public void setAdmin(Admin admin) {
-        this.admin=admin;
+        this.admin = admin;
     }
-    public void setOrderList(Admin admin){
-        orderList= FXCollections.observableArrayList(admin.getQueue().getList());
+
+    public void setOrderList(Admin admin) {
+        orderList = FXCollections.observableArrayList(admin.getQueue().getList());
     }
+
     @FXML
     private Button backButton;
 
@@ -60,6 +63,7 @@ public class ManageOrderController {
     public void initialize() throws IOException {
         showTable();
     }
+
     @FXML
     protected void showTable() {
 
@@ -76,44 +80,58 @@ public class ManageOrderController {
 
     @FXML
     protected void onBackButtonClick(ActionEvent event) throws IOException {
-        FXMLLoader loader=new FXMLLoader(getClass().getResource("HomePage.fxml"));
-        root=loader.load();
-        HomePageController controller=loader.getController();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("HomePage.fxml"));
+        root = loader.load();
+        HomePageController controller = loader.getController();
         controller.setAdmin(admin);
-        stage=(Stage)((Node)event.getSource()).getScene().getWindow();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
-        scene=new Scene(root);
+        scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
 
     }
-    @FXML
-    protected void findEmptyWashingSlot()throws IOException{
-        WorkingSlot emptySlot=admin.getBst().findEmptySlot();
 
-        this.slotIndex=emptySlot.getId();
+    @FXML
+    protected void findEmptyWashingSlot() throws IOException {
+        WorkingSlot emptySlot = admin.getBst().findEmptySlot();
+
+        this.slotIndex = emptySlot.getId();
         slotNumber.setText(String.valueOf(slotIndex));
     }
+
     @FXML
-    protected void checkOutProcess(ActionEvent event) throws IOException{
-        PendingClothGroup removedGroup=admin.getQueue().dequeue();
-        WorkingSlot currentslot=admin.getBst().getWorkingSlot(this.slotIndex);
+    protected void checkOutProcess(ActionEvent event) throws IOException {
+        PendingClothGroup removedGroup = admin.getQueue().dequeue();
+        WorkingSlot currentslot = admin.getBst().getWorkingSlot(this.slotIndex);
 
         currentslot.setGroup(removedGroup);
         admin.getBst().useSlot(this.slotIndex);
         currentslot.setRemainTime(removedGroup.getDuration());
-        FXMLLoader loader=new FXMLLoader(getClass().getResource("ManageSlot.fxml"));
-        root=loader.load();
-        ManageSlot controller=loader.getController();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("ManageSlot.fxml"));
+        root = loader.load();
+        ManageSlot controller = loader.getController();
         controller.setAdmin(admin);
 
         controller.setSlot(admin.getBst().getWorkingSlot(this.slotIndex));
-        stage=(Stage)((Node)event.getSource()).getScene().getWindow();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
-        scene=new Scene(root);
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    protected void onOrderHistoryButtonClick(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("OrderHistory.fxml"));
+        root = loader.load();
+        OrderHistoryController controller = loader.getController();
+        controller.setAdmin(admin);
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
 
     }
-
 }
