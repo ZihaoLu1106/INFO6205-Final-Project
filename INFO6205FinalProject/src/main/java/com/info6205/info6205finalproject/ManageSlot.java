@@ -28,6 +28,8 @@ public class ManageSlot {
     private Label slotIndex;
     @FXML
     private Pane showColor;
+    @FXML
+    private Button btnfinish;
 
     private WorkingSlot slot;
 
@@ -42,10 +44,17 @@ public class ManageSlot {
             BackgroundFill backgroundFill = new BackgroundFill(Color.RED, null, null);
             Background background = new Background(backgroundFill);
             showColor.setBackground(background);
+            btnfinish.setDisable(true);
         }else if(slot.isEmpty()){
             BackgroundFill backgroundFill = new BackgroundFill(Color.GREEN, null, null);
             Background background = new Background(backgroundFill);
             showColor.setBackground(background);
+            btnfinish.setDisable(true);
+        }else if(slot.getStatus().equals("Finished")) {
+            BackgroundFill backgroundFill = new BackgroundFill(Color.BLUE, null, null);
+            Background background = new Background(backgroundFill);
+            showColor.setBackground(background);
+            btnfinish.setDisable(false);
         }
 
     }

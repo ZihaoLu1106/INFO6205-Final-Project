@@ -75,7 +75,17 @@ public class ManageWashSlotController {
     }
     @FXML
     protected void nextDayAction(ActionEvent event)throws IOException{
-
+        Button[] buttons = {washingSlot1,washingSlot2,washingSlot3,washingSlot4,washingSlot5,washingSlot6,washingSlot7,washingSlot8};
+        for(int i=0;i<=7;i++){
+            WorkingSlot slot=admin.getBst().getWorkingSlot(i+1);
+            if(slot.getRemainTime()>0){
+                slot.setRemainTime(slot.getRemainTime()-1);
+                if(slot.getRemainTime()==0){
+                    buttons[i].setStyle("-fx-background-color: blue;");
+                    slot.setStatus("Finished");
+                }
+            }
+        }
     }
 
 }
