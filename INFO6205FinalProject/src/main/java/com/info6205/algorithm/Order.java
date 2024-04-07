@@ -1,5 +1,8 @@
 package com.info6205.algorithm;
 
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
+
 public class Order implements BagInterface<Order>{
     //this class forms as BAG!!!
     //add cloths
@@ -24,6 +27,20 @@ public class Order implements BagInterface<Order>{
         this.status="unfinished";
         this.totalPrice=0;
         numberOfEntries = 0;
+    }
+    public void checkStatus(){
+        if(groups!=null) {
+            boolean isComplete = true;
+            for (PendingClothGroup group : groups) {
+                if (group.getStatus().equals("Processing")) {
+                    isComplete = false;
+                    break;
+                }
+            }
+            if (isComplete == true) {
+                status = "completed";
+            }
+        }
     }
 
     public String getOrderID() {
@@ -134,4 +151,20 @@ public class Order implements BagInterface<Order>{
         } // end if
         return result;
     }
+    public StringProperty statusProperty() {
+        SimpleStringProperty nump=new SimpleStringProperty();
+        nump.setValue(String.valueOf(this.status));
+        return nump;
+    }
+    public StringProperty priceProperty() {
+        SimpleStringProperty durationp=new SimpleStringProperty();
+        durationp.setValue(String.valueOf(this.totalPrice));
+        return durationp;
+    }
+    public StringProperty idProperty() {
+        SimpleStringProperty idp=new SimpleStringProperty();
+        idp.setValue(this.orderID);
+        return idp;
+    }
+
 }

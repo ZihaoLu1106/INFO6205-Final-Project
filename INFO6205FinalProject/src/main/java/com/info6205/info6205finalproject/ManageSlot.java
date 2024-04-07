@@ -77,4 +77,13 @@ public class ManageSlot {
 
 
     }
+    @FXML
+    protected void onFinishButton(ActionEvent event){
+        this.slot.setStatus("Empty");
+        this.slot.getGroup().setStatus("Finished");
+        BackgroundFill backgroundFill = new BackgroundFill(Color.GREEN, null, null);
+        Background background = new Background(backgroundFill);
+        showColor.setBackground(background);
+        btnfinish.setDisable(true);
+    }
 }

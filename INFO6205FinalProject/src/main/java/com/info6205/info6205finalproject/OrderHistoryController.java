@@ -26,25 +26,28 @@ public class OrderHistoryController {
     private Scene scene;
     private Parent root;
     private Admin admin;
-    private ObservableList<PendingClothGroup> orderList;
+    private ObservableList<Order> orderList;
 
     public void setAdmin(Admin admin) {
         this.admin = admin;
     }
 
     @FXML
-    private TableView<PendingClothGroup> orderhistoryTable;
+    private TableView<Order> orderhistoryTable;
     @FXML
-    private TableColumn<PendingClothGroup, String> orderIDColumn;
+    private TableColumn<Order, String> statusColumn;
     @FXML
-    private TableColumn<PendingClothGroup, String> clothNumColumn;
+    private TableColumn<Order, String> priceColumn;
     @FXML
-    private TableColumn<PendingClothGroup, String> methodColumn;
+    private TableColumn<Order, String> orderIDColumn;
 
 
 
     public void setOrderList(Admin admin) {
-        orderList = FXCollections.observableArrayList(admin.getQueue().getList());
+        for(Order order:admin.getOrderList()){
+            order.checkStatus();
+        }
+        orderList = FXCollections.observableArrayList(admin.getOrderList());
     }
 
     @FXML
@@ -55,8 +58,8 @@ public class OrderHistoryController {
     protected void showTable() {
 
         orderIDColumn.setCellValueFactory(data -> data.getValue().idProperty());
-        clothNumColumn.setCellValueFactory(data -> data.getValue().numProperty());
-        methodColumn.setCellValueFactory(data -> data.getValue().methodProperty());
+        statusColumn.setCellValueFactory(data -> data.getValue().statusProperty());
+        priceColumn.setCellValueFactory(data -> data.getValue().priceProperty());
         orderhistoryTable.setItems(orderList);
     }
 

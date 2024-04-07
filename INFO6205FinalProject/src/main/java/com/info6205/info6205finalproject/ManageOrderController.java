@@ -127,8 +127,8 @@ public class ManageOrderController {
         root = loader.load();
         OrderHistoryController controller = loader.getController();
         controller.setAdmin(admin);
+        controller.setOrderList(admin);
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();

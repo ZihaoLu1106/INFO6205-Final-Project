@@ -149,7 +149,8 @@ public class TreeToCategorizeCloth {
                 newGroup.getCloths().add(order.getCloths()[index]);
                 newGroup.setStatus("processing");
                 list.add(newGroup);
-                order.setTotalPrice(order.getTotalPrice()+washMethod.getPrice());
+
+
             }
         }
         for(PendingClothGroup g:list){

@@ -27,6 +27,7 @@ public class CreateOrderController {
     private Parent root;
     private Order newOrder;
     private Admin admin;
+    private int isUrgent;
     ObservableList<Cloth> cloths;
    @FXML
     public void setAdmin(Admin admin) {
@@ -49,7 +50,10 @@ public class CreateOrderController {
     @FXML
     private Button checkOutButton;
     @FXML
+    private Button urgentButton;
+    @FXML
     public void initialize() throws IOException {
+        isUrgent=0;
         cloths = FXCollections.observableArrayList();
 
         colorBox.getItems().removeAll(colorBox.getItems());
@@ -134,8 +138,17 @@ public class CreateOrderController {
         TreeToCategorizeCloth tree=new TreeToCategorizeCloth();
         List<PendingClothGroup>list=tree.manageOrder(order);
         for(PendingClothGroup group:list){
-            admin.getQueue().enqueue(group,1);
+            admin.getQueue().enqueue(group,isUrgent);
+            order.setTotalPrice(order.getTotalPrice()+group.getPrice());
+
         }
+        order.setGroups(list.toArray(PendingClothGroup[]::new));
+    }
+    @FXML
+    protected void urgentButton(){
+        this.isUrgent=1;
+        urgentButton.setDisable(true);
+
     }
 
 }

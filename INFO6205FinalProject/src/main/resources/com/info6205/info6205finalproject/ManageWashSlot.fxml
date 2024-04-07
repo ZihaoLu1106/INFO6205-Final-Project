@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.info6205.info6205finalproject.ManageWashSlotController">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.info6205.info6205finalproject.ManageWashSlotController">
    <children>
        <Button fx:id="backButton" layoutX="42.0" layoutY="48.0" mnemonicParsing="false" onAction="#onBackButtonClick" text="Back" />
       <BorderPane layoutX="115.0" layoutY="87.0" prefHeight="46.0" prefWidth="107.0" />

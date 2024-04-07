@@ -26,6 +26,6 @@
       </TableView>
       <Button fx:id="addButton" layoutX="637.0" layoutY="119.0" mnemonicParsing="false" onAction="#onAddButtonClick" text="add" />
       <Button fx:id="checkOutButton" layoutX="610.0" layoutY="429.0" mnemonicParsing="false" onAction="#onCheckOutButtonClick" prefHeight="71.0" prefWidth="150.0" text="check out" />
-      <Button layoutX="610.0" layoutY="277.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="121.0" text="urgent" />
+      <Button fx:id="urgentButton" layoutX="610.0" layoutY="277.0" mnemonicParsing="false" onAction="#urgentButton" prefHeight="46.0" prefWidth="121.0" text="urgent" />
    </children>
 </AnchorPane>
