@@ -70,6 +70,7 @@ public class OrderHistoryController {
         root = loader.load();
         ManageOrderController controller = loader.getController();
         controller.setAdmin(admin);
+        controller.setOrderList(admin);
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
         scene = new Scene(root);
