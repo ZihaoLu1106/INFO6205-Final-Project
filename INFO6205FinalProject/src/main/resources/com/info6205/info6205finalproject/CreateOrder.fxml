@@ -10,22 +10,31 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.info6205.info6205finalproject.CreateOrderController">
    <children>
-      <Button fx:id="backButton" layoutX="42.0" layoutY="48.0" mnemonicParsing="false" onAction="#onBackButtonClick" text="Back" />
-      <Label layoutX="271.0" layoutY="34.0" text="Create a new Order">
+      <Button fx:id="backButton" layoutX="42.0" layoutY="48.0" mnemonicParsing="false" onAction="#onBackButtonClick" text="&lt;&lt; Back" />
+      <Label layoutX="299.0" layoutY="33.0" text="Create a new Order">
          <font>
-            <Font size="21.0" />
+            <Font size="25.0" />
          </font>
       </Label>
       <ComboBox fx:id="colorBox" layoutX="42.0" layoutY="120.0" prefWidth="150.0" promptText="color" />
-      <ComboBox fx:id="materialBox" layoutX="308.0" layoutY="120.0" prefWidth="150.0" promptText="material" />
-      <TableView fx:id="cartTable" layoutX="42.0" layoutY="189.0" prefHeight="345.0" prefWidth="464.0">
+      <ComboBox fx:id="materialBox" layoutX="239.0" layoutY="120.0" prefWidth="150.0" promptText="material" />
+      <TableView fx:id="cartTable" layoutX="45.0" layoutY="170.0" prefHeight="345.0" prefWidth="711.0">
         <columns>
           <TableColumn fx:id="colorColumn" prefWidth="200.5" text="color" />
           <TableColumn fx:id="materialColumn" minWidth="0.0" prefWidth="266.5" text="material" />
         </columns>
       </TableView>
-      <Button fx:id="addButton" layoutX="637.0" layoutY="119.0" mnemonicParsing="false" onAction="#onAddButtonClick" text="add" />
-      <Button fx:id="checkOutButton" layoutX="610.0" layoutY="429.0" mnemonicParsing="false" onAction="#onCheckOutButtonClick" prefHeight="71.0" prefWidth="150.0" text="check out" />
-      <Button fx:id="urgentButton" layoutX="610.0" layoutY="277.0" mnemonicParsing="false" onAction="#urgentButton" prefHeight="46.0" prefWidth="121.0" text="urgent" />
+      <Button fx:id="addButton" layoutX="542.0" layoutY="120.0" mnemonicParsing="false" onAction="#onAddButtonClick" text="Add">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button fx:id="checkOutButton" layoutX="606.0" layoutY="530.0" mnemonicParsing="false" onAction="#onCheckOutButtonClick" prefHeight="30.0" prefWidth="150.0" text="Check out">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button fx:id="urgentButton" layoutX="606.0" layoutY="120.0" mnemonicParsing="false" onAction="#urgentButton" prefHeight="15.0" prefWidth="150.0" text="Urgent">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
    </children>
 </AnchorPane>

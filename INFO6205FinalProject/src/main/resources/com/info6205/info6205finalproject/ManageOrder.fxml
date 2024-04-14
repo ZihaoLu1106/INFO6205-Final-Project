@@ -5,11 +5,15 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.info6205.info6205finalproject.ManageOrderController">
    <children>
-       <Button fx:id="backButton" layoutX="42.0" layoutY="48.0" mnemonicParsing="false" onAction="#onBackButtonClick" text="Back" />
-      <TableView fx:id="orderTable" layoutX="42.0" layoutY="94.0" prefHeight="392.0" prefWidth="570.0">
+       <Button fx:id="backButton" layoutX="42.0" layoutY="48.0" mnemonicParsing="false" onAction="#onBackButtonClick" text="Back">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <TableView fx:id="orderTable" layoutX="39.0" layoutY="145.0" prefHeight="392.0" prefWidth="570.0">
         <columns>
           <TableColumn fx:id="orderIDColumn" prefWidth="205.5" text="Order ID" />
           <TableColumn fx:id="clothNumColumn" prefWidth="74.0" text="Cloth Num" />
@@ -18,11 +22,29 @@
 
         </columns>
       </TableView>
-      <Button fx:id="showTable" layoutX="173.0" layoutY="48.0" mnemonicParsing="false" onAction="#showTable" text="showtable" />
-      <Button fx:id="findSlotButton" layoutX="634.0" layoutY="94.0" mnemonicParsing="false" onAction="#findEmptyWashingSlot" prefHeight="38.0" prefWidth="161.0" text="Processing Next Order" />
-      <Label layoutX="627.0" layoutY="145.0" prefHeight="38.0" prefWidth="175.0" text="The Num of Washing Slot is :" />
-      <Label fx:id="slotNumber" layoutX="627.0" layoutY="183.0" prefHeight="23.0" prefWidth="139.0" text="Washing Number" />
-      <Button fx:id="checkOutButton" layoutX="634.0" layoutY="438.0" mnemonicParsing="false" onAction="#checkOutProcess" prefHeight="38.0" prefWidth="139.0" text="Check Out" />
-      <Button fx:id="orderHistoryButton" layoutX="281.0" layoutY="49.0" mnemonicParsing="false" onAction="#onOrderHistoryButtonClick"  text="order history" />
+      <Button fx:id="showTable" layoutX="42.0" layoutY="94.0" mnemonicParsing="false" onAction="#showTable" prefHeight="38.0" prefWidth="116.0" text="Showtable">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button fx:id="findSlotButton" layoutX="616.0" layoutY="94.0" mnemonicParsing="false" onAction="#findEmptyWashingSlot" prefHeight="38.0" prefWidth="161.0" text="Processing Next Order">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Label layoutX="627.0" layoutY="180.0" prefHeight="38.0" prefWidth="175.0" text="The Num of Washing Slot is :">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="slotNumber" layoutX="627.0" layoutY="218.0" prefHeight="23.0" prefWidth="139.0" text="Washing Number">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Button fx:id="checkOutButton" layoutX="616.0" layoutY="499.0" mnemonicParsing="false" onAction="#checkOutProcess" prefHeight="38.0" prefWidth="161.0" text="Check Out">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button fx:id="orderHistoryButton" layoutX="173.0" layoutY="94.0" mnemonicParsing="false" onAction="#onOrderHistoryButtonClick" prefHeight="38.0" prefWidth="116.0" text="Order History">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
    </children>
 </AnchorPane>

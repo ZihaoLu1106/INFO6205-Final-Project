@@ -15,10 +15,13 @@
     <Label fx:id="welcomeText" />
    <AnchorPane prefHeight="600.0" prefWidth="760.0">
       <children>
-          <Button layoutX="307.0" layoutY="342.0" onAction="#onHelloButtonClick" prefHeight="70.0" prefWidth="147.0" text="Login" />
-         <Label fx:id="title" contentDisplay="CENTER" layoutX="225.0" layoutY="123.0" prefHeight="117.0" prefWidth="297.0" text="Welcome to Laundry Spider！">
+          <Button layoutX="305.0" layoutY="340.0" onAction="#onHelloButtonClick" prefHeight="35.0" prefWidth="147.0" text="Log in">
             <font>
-               <Font size="19.0" />
+               <Font size="18.0" />
+            </font></Button>
+         <Label fx:id="title" contentDisplay="CENTER" layoutX="220.0" layoutY="136.0" prefHeight="117.0" prefWidth="323.0" text="Welcome to Laundry Spider！">
+            <font>
+               <Font size="24.0" />
             </font>
          </Label>
       </children>

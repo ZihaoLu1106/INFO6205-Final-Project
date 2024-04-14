@@ -79,18 +79,5 @@ public class HomePageController {
         stage.setScene(scene);
         stage.show();
     }
-    @FXML
-    protected void onCheckRevenueButtonClick(ActionEvent event)throws IOException {
-        FXMLLoader loader=new FXMLLoader(getClass().getResource("CheckRevenue.fxml"));
-        root=loader.load();
-        CheckRevenueController controller=loader.getController();
-        controller.setAdmin(admin);
-        stage=(Stage)((Node)event.getSource()).getScene().getWindow();
-        if(admin==null)
-            System.out.println("Yes");
-        scene=new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
 
 }
