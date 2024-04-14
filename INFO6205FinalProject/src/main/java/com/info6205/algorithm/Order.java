@@ -32,12 +32,13 @@ public class Order implements BagInterface<Order>{
         if(groups!=null) {
             boolean isComplete = true;
             for (PendingClothGroup group : groups) {
-                if (group.getStatus().equals("Processing")) {
+                if (!group.getStatus().equals("Finished")) {
                     isComplete = false;
                     break;
                 }
             }
             if (isComplete == true) {
+                System.out.println("completed");
                 status = "completed";
             }
         }

@@ -140,7 +140,6 @@ public class CreateOrderController {
         for(PendingClothGroup group:list){
             admin.getQueue().enqueue(group,isUrgent);
             order.setTotalPrice(order.getTotalPrice()+group.getPrice());
-
         }
         order.setGroups(list.toArray(PendingClothGroup[]::new));
     }
