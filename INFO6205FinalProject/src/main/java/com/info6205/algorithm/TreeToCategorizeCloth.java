@@ -63,15 +63,15 @@ public class TreeToCategorizeCloth {
         Wool1.addChildren(new TreeNode<>("Normal"));
         Polyester1.addChildren(new TreeNode<>("Strong"));
 
-        Cotton2.addChildren(new TreeNode<>("Strong"));
-        Denim2.addChildren(new TreeNode<>("Light"));
+        Cotton2.addChildren(new TreeNode<>("Normal"));
+        Denim2.addChildren(new TreeNode<>("Strong"));
         Wool2.addChildren(new TreeNode<>("Normal"));
-        Polyester2.addChildren(new TreeNode<>("Strong"));
+        Polyester2.addChildren(new TreeNode<>("Light"));
 
         Cotton3.addChildren(new TreeNode<>("Strong"));
-        Denim3.addChildren(new TreeNode<>("Light"));
-        Wool3.addChildren(new TreeNode<>("Normal"));
-        Polyester3.addChildren(new TreeNode<>("Strong"));
+        Denim3.addChildren(new TreeNode<>("Strong"));
+        Wool3.addChildren(new TreeNode<>("Light"));
+        Polyester3.addChildren(new TreeNode<>("Normal"));
 
         WashingMethod strongWash=new WashingMethod("Strong",3,1);
         WashingMethod lightWash=new WashingMethod("Light",2,2);
